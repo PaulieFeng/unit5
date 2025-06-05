@@ -4,8 +4,8 @@ final int GAME=2;
 final int PAUSE=3;
 final int GAMEOVER =4;
 
-float leftx,lefty,leftd,rightx,righty,rightd;
-float ballx,bally,balld;
+float lx,ly,ld,rx,ry,rd;
+float bx,by,bd;
 float vx,vy;
 boolean AI;
 
@@ -23,16 +23,16 @@ void setup(){
   size(800,600);
   mode=INTRO;
   
-  leftx=0;
-  lefty=height/2;
-  leftd=200;
-  rightx=width;
-  righty=height/2;
-  rightd=200;
+  lx=0;
+  ly=height/2;
+  ld=200;
+  rx=width;
+  ry=height/2;
+  rd=200;
   
-  ballx=width/2;
-  bally=height/2;
-  balld=100;
+  bx=width/2;
+  by=height/2;
+  bd=100;
   vx=random(-3,3);
   vy=random(-3,3);
   
@@ -43,16 +43,19 @@ void setup(){
  }
 
 void draw() {
-  if(mode==INTRO){
+  
+  
+  
+  if(mode == INTRO){
     intro();
-  } else if(mode==GAME){
+  } else if(mode == GAME){
     game();
-  } else if(mode==PAUSE){
+  } else if(mode == PAUSE){
     pause();
-  } else if(mode==GAMEOVER){
+  } else if(mode == GAMEOVER){
     gameover();
   } else {
-    println("MODE error" + mode);
+    println("MODE error: " + mode);
   }
 }
    
