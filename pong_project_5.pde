@@ -11,10 +11,10 @@ boolean AI;
 
 int leftscore,rightscore,timer;
 
-color lightpurple=#BF9A82;
+color lightbrown=#BC5B00;
 color brown=#45201E;
-color pink=#FF0F53;
-color green=#558A67;
+color red=#FF0000;
+color green=#00FF00;
 
 boolean wkey,skey,upkey,downkey;
 
@@ -43,20 +43,20 @@ void setup(){
  }
 
 void draw() {
+  game();
   
   
-  
-  if(mode == INTRO){
-    intro();
-  } else if(mode == GAME){
-    game();
-  } else if(mode == PAUSE){
-    pause();
-  } else if(mode == GAMEOVER){
-    gameover();
-  } else {
-    println("MODE error: " + mode);
-  }
+  //if(mode == INTRO){
+  //  intro();
+  //} else if(mode == GAME){
+  //  game();
+  //} else if(mode == PAUSE){
+  //  pause();
+  //} else if(mode == GAMEOVER){
+  //  gameover();
+  //} else {
+  //  println("MODE error: " + mode);
+  //}
 }
    
   
